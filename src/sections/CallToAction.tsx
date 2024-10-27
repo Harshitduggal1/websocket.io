@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import { useRef } from "react";
 import useRelativeMousePosition from "@/hooks/useRelativeMousePosition";
+import Particles from "@/components/ui/particles";
 
 export const CallToAction = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -45,7 +46,13 @@ export const CallToAction = () => {
             backgroundImage: `url(${StarsImage.src})`,
           }}
           className="relative border-white/20 bg-white/5 bg-opacity-10 shadow-2xl backdrop-blur-lg py-24 border rounded-3xl transform transition-all duration-300 overflow-hidden group hover:scale-[1.02]"
-        >
+        > <Particles
+        className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        color="#FFFFFF"
+        refresh
+      />
           <div
             className="absolute inset-0 bg-blend-overlay bg-gradient-to-br from-purple-600/30 to-blue-600/30 [mask-image:radial-gradient(60%_60%_at_50%_35%,black,transparent)] group-hover:opacity-0 transition duration-700"
             style={{

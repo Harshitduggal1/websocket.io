@@ -1,4 +1,5 @@
 import { Logo, SocialX, SocialInstagram, SocialYoutube } from "@/assets";
+import Particles from "@/components/ui/particles";
 import Link from "next/link";
 
 const navItems = [
@@ -35,7 +36,13 @@ export const Footer = () => {
             <SocialInstagram className="text-white/60 hover:text-white transform transition-all duration-300 hover:scale-125 hover:-rotate-12" />
             <SocialYoutube className="text-white/60 hover:text-white transform transition-all duration-300 hover:scale-125 hover:rotate-6" />
           </div>
-        </div>
+        </div> <Particles
+        className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        color="#FFFFFF"
+        refresh
+      />
         <div className="flex justify-center mt-12">
           <Link
             href="https://github.com/harshitduggal1"
