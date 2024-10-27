@@ -69,8 +69,8 @@ Message hash: ${hash}`);
   }
 
   private stopPingInterval() {
-    if (this.pingInterval) clearInterval(this.pingInterval);
-    if (this.pongTimeout) clearTimeout(this.pongTimeout);
+    if (this.pingInterval) {clearInterval(this.pingInterval);}
+    if (this.pongTimeout) {clearTimeout(this.pongTimeout);}
   }
 
   public send(data: string | Buffer) {
